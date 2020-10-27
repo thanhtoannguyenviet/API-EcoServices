@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.model.DB.DetailOderEntity" table="DetailOder" schema="dbo" catalog="JobService">
+        <id name="idDetailOder">
+            <column name="idDetailOder" sql-type="bigint"/>
+            <generator class="identity"/>
+        </id>
+        <property name="idOrder">
+            <column name="idOrder" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="weekly">
+            <column name="weekly" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

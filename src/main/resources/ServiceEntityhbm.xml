@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.model.DB.ServiceEntity" table="Service_" schema="dbo" catalog="JobService">
+        <id name="idService">
+            <column name="idService" sql-type="bigint"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nameservice">
+            <column name="nameservice" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="ntext" not-null="true"/>
+        </property>
+        <property name="actived">
+            <column name="actived" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.model.DB.OrderEntity" table="Order_" schema="dbo" catalog="JobService">
+        <id name="idOrder">
+            <column name="idOrder" sql-type="bigint"/>
+            <generator class="identity"/>
+        </id>
+        <property name="idCustomer">
+            <column name="idCustomer" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="idCs">
+            <column name="idCS" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="idTradeCode">
+            <column name="idTradeCode" sql-type="nvarchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="typeTradeCode">
+            <column name="typeTradeCode" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar(10)" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

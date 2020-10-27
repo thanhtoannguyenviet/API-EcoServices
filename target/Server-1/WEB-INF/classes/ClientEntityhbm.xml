@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.model.DB.ClientEntity" table="Client" schema="dbo" catalog="JobService">
+        <id name="idClient">
+            <column name="idClient" sql-type="bigint"/>
+            <generator class="identity"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(70)" length="70" not-null="true"/>
+        </property>
+        <property name="fullname">
+            <column name="fullname" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="nvarchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="privatekey">
+            <column name="privatekey" sql-type="nvarchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="actived">
+            <column name="actived" sql-type="int" not-null="true"/>
+        </property>
+        <property name="role">
+            <column name="role_" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

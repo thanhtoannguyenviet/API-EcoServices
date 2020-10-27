@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.model.DB.CompanyServiceEntity" table="Company_Service" schema="dbo" catalog="JobService">
+        <id name="idCs">
+            <column name="idCS" sql-type="bigint"/>
+            <generator class="identity"/>
+        </id>
+        <property name="idCompany">
+            <column name="idCompany" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="idService">
+            <column name="idService" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="unit">
+            <column name="unit" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="ntext" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="nameCos">
+            <column name="nameCos" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
