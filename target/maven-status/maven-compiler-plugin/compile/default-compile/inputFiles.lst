@@ -22,6 +22,7 @@ C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\config\WebConfig
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\model\DB\ClientEntity.java
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\model\DB\FeedbackEntity.java
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\DAO\RateDAO.java
+C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\Comom\CUSTOM_QUERY.java
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\Comom\STATUS.java
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\config\WebInit.java
 C:\Project\javawspc\DoAnChuyenNganh\Server\src\main\java\Server\model\DTO\DetailOrderDTO.java

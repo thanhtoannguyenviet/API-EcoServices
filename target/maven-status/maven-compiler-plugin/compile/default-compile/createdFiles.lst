@@ -16,6 +16,7 @@ Server\DAO\OrderDAO.class
 Server\model\DB\ClientEntity.class
 Server\DAO\RateDAO.class
 Server\DAO\DetailOrderDAO.class
+Server\Comom\CUSTOM_QUERY.class
 Server\controller\DetailOrderController.class
 Server\model\DTO\Criteria.class
 Server\controller\FeedbackController.class

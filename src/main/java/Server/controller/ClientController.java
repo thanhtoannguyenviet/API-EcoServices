@@ -99,6 +99,18 @@ public class ClientController {
         }
         return new ResponseEntity<>(MESSAGES.NOTFOUND, HttpStatus.NOT_FOUND);
     }
+    @RequestMapping(value = "/Login/",
+            method = RequestMethod.POST,
+            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ResponseBody
+    public ResponseEntity<?> forgotPassword( @RequestBody ClientEntity entity) {
+        ClientEntity clientEntity = clientDAO.loginClient(entity.getUsername(),entity.getPassword());
+        if (clientEntity != null){
+            ClientDTO clientDTO = getClientDTO(clientEntity);
+            return new ResponseEntity<>(clientDTO, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(MESSAGES.NOTFOUND, HttpStatus.NOT_FOUND);
+    }
 
     private ClientDTO getClientDTO(Long id){
         ClientEntity clientEntity = clientDAO.getByID(id);
